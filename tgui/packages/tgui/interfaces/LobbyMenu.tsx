@@ -392,22 +392,22 @@ const LobbyButtons = (props: {
           }
           icon="book-open"
         >
-          Обучение
+          Tutorial
         </LobbyButton>
         <LobbyButton
           index={2}
           onClick={() => act('preferences')}
           icon="file-lines"
         >
-          Настройка Персонажа
+          Setup Character
         </LobbyButton>
 
         <LobbyButton index={3} icon="check-to-slot" onClick={() => act('poll')}>
-          Голосования
+          Polls
         </LobbyButton>
 
         <LobbyButton index={4} onClick={() => act('playtimes')} icon="list-ul">
-          Наигранное время
+          View Playtimes
         </LobbyButton>
 
         <TimedDivider />
@@ -420,19 +420,18 @@ const LobbyButtons = (props: {
               <ModalConfirm>
                 <Box>
                   <Stack vertical>
-                    <Stack.Item>Вы точно хотите наблюдать?</Stack.Item>
+                    <Stack.Item>Are you sure you wish to observe?</Stack.Item>
                     <Stack.Item>
-                      Когда вы будете наблюдать, вы не сможете присоединиться к
-                      игре в качестве морпеха
+                      When you observe, you will not be able to join as marine.
                     </Stack.Item>
                     <Stack.Item>
-                      Также может потребоваться некоторое время, чтобы стать
-                      ксеноморфом.
+                      It might also take some time to become a xeno or
+                      responder!
                     </Stack.Item>
                   </Stack>
                   <Stack justify="center">
                     <Stack.Item>
-                      <Button onClick={() => act('observe')}>Принять</Button>
+                      <Button onClick={() => act('observe')}>Confirm</Button>
                     </Stack.Item>
                   </Stack>
                 </Box>
@@ -440,7 +439,7 @@ const LobbyButtons = (props: {
             );
           }}
         >
-          Наблюдать
+          Observe
         </LobbyButton>
 
         {round_start ? (
@@ -467,7 +466,7 @@ const LobbyButtons = (props: {
                     onClick={() => act('late_join')}
                     icon="users"
                   >
-                    Стать Морпехом
+                    Join the USCM
                   </LobbyButton>
                 </Stack.Item>
                 <Stack.Item>
@@ -488,7 +487,7 @@ const LobbyButtons = (props: {
                     icon="viruses"
                     onClick={() => act('late_join_xeno')}
                   >
-                    Стать Ксеноморфом
+                    Join the Hive
                   </LobbyButton>
                 </Stack.Item>
                 <Stack.Item>
@@ -508,7 +507,7 @@ const LobbyButtons = (props: {
                   onClick={() => act('late_join_upp')}
                   icon="users-between-lines"
                 >
-                  Присоединиться за ЮПП
+                  Join the UPP
                 </LobbyButton>
               </Stack.Item>
             )}
@@ -522,14 +521,14 @@ const LobbyButtons = (props: {
                         <Box>
                           <Stack vertical>
                             <Stack.Item>
-                              Вы уверены, что желаете присоединиться за
-                              Хищника??
+                              Are you sure want to attempt joining as a
+                              Predator?
                             </Stack.Item>
                           </Stack>
                           <Stack justify="center">
                             <Stack.Item>
                               <Button onClick={() => act('late_join_pred')}>
-                                Принять
+                                Confirm
                               </Button>
                             </Stack.Item>
                           </Stack>
@@ -565,7 +564,7 @@ const LobbyButtons = (props: {
                           <Stack justify="center">
                             <Stack.Item>
                               <Button onClick={() => act('late_join_faxes')}>
-                                Принять
+                                Confirm
                               </Button>
                             </Stack.Item>
                           </Stack>
