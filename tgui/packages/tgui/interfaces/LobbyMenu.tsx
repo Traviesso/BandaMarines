@@ -432,7 +432,7 @@ const LobbyButtons = (props: {
                   </Stack>
                   <Stack justify="center">
                     <Stack.Item>
-                      <Button onClick={() => act('observe')}>Confirm</Button>
+                      <Button onClick={() => act('observe')}>Принять</Button>
                     </Stack.Item>
                   </Stack>
                 </Box>
