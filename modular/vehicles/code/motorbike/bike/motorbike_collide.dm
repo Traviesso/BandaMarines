@@ -24,7 +24,10 @@
 	last_crash_time = world.time
 
 	// Шанс от скилла что мы не врежимся и остановимся
-	var/crash_chance_prob = 100 - crash_chance * buckled_mob.get_skill_duration_multiplier(SKILL_VEHICLE)
+	if(buckled_mob && istype(buckled_mob, /mob))
+	var/skill_multiplier = buckled_mob.get_skill_duration_multiplier(SKILL_VEHICLE)
+	var/crash_chance_prob = 100 - (crash_chance * skill_multiplier)
+
 	if(prob(crash_chance_prob))
 		to_chat(buckled_mob, SPAN_NOTICE("Вы избежали аварии, благодаря вашему умелому вождению!"))
 		reset_speed()
